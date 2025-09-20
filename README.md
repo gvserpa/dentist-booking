@@ -2,7 +2,7 @@
 
 ## LIVE DEMO ##
 
- [https://dentist-booking-ten.vercel.app/]
+ (https://dentist-booking-ten.vercel.app/)
 
 ## Overview
 
