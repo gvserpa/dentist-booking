@@ -48,29 +48,6 @@ The system is fully responsive and provides a seamless experience for both users
 
 ---
 
-## Project Structure
-
-dentist-booking/
-│
-├─ public/                 # Public files and images
-├─ src/
-│  ├─ assets/              # Images and icons
-│  ├─ components/          # Reusable components
-│  ├─ pages/
-│  │  ├─ LoginPage.jsx
-│  │  ├─ RegisterPage.jsx
-│  │  ├─ DashboardUser.jsx
-│  │  ├─ DashboardAdmin.jsx
-│  ├─ services/
-│  │  └─ api.js            # Firebase configuration
-│  ├─ App.jsx
-│  └─ index.jsx
-├─ .env                    # Environment variables (do NOT commit)
-├─ package.json
-└─ README.md
-
----
-
 ## Local Setup
 
 1. Clone the repository:
