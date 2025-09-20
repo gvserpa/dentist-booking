@@ -1,0 +1,121 @@
+.RegisterPage {
+  background-image: url("../../assets/bg-login.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0; /* espaço para telas baixas */
+}
+
+.register-form {
+  border-radius: 10px;
+  padding: 20px;
+  width: 20vw;
+  min-width: 300px;   /* garante tamanho mínimo */
+  min-height: 400px;  /* garante altura mínima */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.4);
+  gap: 15px;
+  box-sizing: border-box;
+}
+
+.register-form p {
+  font-weight: 600;
+}
+
+.register-form input {
+  margin-bottom: 5px;
+  width: 15vw;
+  min-width: 200px;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+}
+
+.register-form input:focus {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.register-forget {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.register-form button {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  display: flex;
+  width: 15vw;
+  min-width: 200px;
+  padding: 15px;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: rgb(141, 141, 190);
+  border: none;
+  color: white;
+}
+
+.register-form button:hover {
+  cursor: pointer;
+  background-color: rgb(162, 162, 194);
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.success-message {
+  color: green;
+  margin-bottom: 10px;
+}
+
+/* Media query por largura e altura */
+@media (max-width: 1024px), (max-height: 600px) {
+  .register-form {
+    width: 40vw;
+    min-width: 280px;
+    min-height: 350px;
+    height: auto;
+  }
+
+  .register-form input,
+  .register-form button {
+    width: 30vw;
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .register-form {
+    width: 80vw;
+    height: auto;
+    padding: 20px;
+  }
+
+  .register-form input,
+  .register-form button {
+    width: 70vw;
+  }
+
+  .register-form button {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .register-form input,
+  .register-form button {
+    width: 70vw;
+  }
+
+  .register-form {
+    gap: 10px;
+  }
+}

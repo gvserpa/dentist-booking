@@ -1,0 +1,100 @@
+.LoginPage {
+  background-image: url("../../assets/bg-login.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0; /* garante espaço em telas baixas */
+}
+
+.login-form {
+  border-radius: 10px;
+  padding: 20px;
+  width: 20vw;
+  min-width: 300px; /* garante tamanho mínimo */
+  min-height: 400px; /* ajusta para telas baixas */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.4);
+  gap: 15px;
+  box-sizing: border-box;
+}
+
+.login-form input {
+  width: 15vw;
+  min-width: 200px;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+}
+
+.login-form button {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  width: 15vw;
+  min-width: 200px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: rgb(141, 141, 190);
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+
+.login-form button:hover {
+  cursor: pointer;
+  background-color: rgb(162, 162, 194);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Media query por largura e altura */
+@media (max-width: 1024px), (max-height: 600px) {
+  .login-form {
+    width: 40vw;
+    min-width: 280px;
+    min-height: 350px;
+    height: auto; /* deixa flexível */
+  }
+
+  .login-form input,
+  .login-form button {
+    width: 30vw;
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-form {
+    width: 80vw;
+    height: auto;
+    padding: 20px;
+  }
+
+  .login-form input,
+  .login-form button {
+    width: 70vw;
+  }
+
+  .login-form button {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .login-form input,
+  .login-form button {
+    width: 70vw;
+  }
+
+  .login-form {
+    gap: 10px;
+  }
+}

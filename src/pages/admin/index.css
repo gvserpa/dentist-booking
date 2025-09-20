@@ -1,0 +1,70 @@
+.admin-dashboard {
+  padding: 20px;
+}
+
+.day-section {
+  margin-bottom: 30px;
+}
+
+.day-appointments {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 5px;
+  max-height: 300px; /* adiciona rolagem se houver muitos appointments */
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+
+.appointment-card {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+.appointment-card.finished {
+  background-color: #d4f7d4; /* verde clarinho */
+}
+
+
+.appointment-card.upcoming {
+  border-left: 4px solid #3498db; /* azul */
+}
+.appointment-card.done {
+  border-left: 4px solid #2ecc71; /* verde */
+}
+.appointment-card.cancelled {
+  border-left: 4px solid #e74c3c; /* vermelho */
+}
+
+
+.appointment-card button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+}
+
+.appointment-card button:hover {
+  background-color: #d9363e;
+}
+
+.done button {
+  background-color: #4CAF50; /* verde */
+  color: white; /* texto branco */
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.done button:hover {
+  background-color: #45a049; /* verde mais escuro no hover */
+}

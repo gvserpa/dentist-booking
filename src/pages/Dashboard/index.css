@@ -1,0 +1,207 @@
+.Dashboard {
+  background-image: url("../../assets/bg-login.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* start para ter mais espaço vertical */
+  gap: 50px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  flex-wrap: wrap;
+}
+
+.new-appointment,
+.in-coming-appointments {
+  background-color: white;
+  width: 30vw;
+  min-width: 280px;
+  max-width: 500px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.in-coming-appointments {
+  padding: 10px;
+  height: auto; /* altura automática para não gerar scroll */
+}
+
+.in-coming-appointments h2 {
+  margin: 0 0 10px 0;
+}
+
+.new-appointment form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.new-appointment button {
+  padding: 12px;
+  background-color: rgb(74, 194, 74);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.new-appointment button:hover {
+  background-color: rgb(97, 230, 97);
+  cursor: pointer;
+}
+
+.appointment-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(221, 218, 218);
+  padding: 8px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.appointment-card p {
+  width: 5vw;
+  min-width: 80px;
+}
+
+.appointment-card button {
+  height: 3vh;
+  padding: 2px 6px;
+  background-color: coral;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.appointment-card button:hover {
+  background-color: rgb(252, 161, 127);
+  cursor: pointer;
+}
+
+/* Media queries - telas médias (tablets) */
+@media (max-width: 1024px), (max-height: 600px) {
+  .card {
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+  }
+
+  .new-appointment,
+  .in-coming-appointments {
+    width: 80%;
+    max-width: 400px;
+  }
+
+  .appointment-card p {
+    width: 25%;
+  }
+}
+
+
+@media (max-width: 1024px) and (max-height: 600px) {
+  .Dashboard {
+    justify-content: flex-start; 
+    gap: 30px;
+    padding: 15px;
+  }
+
+  .card {
+    flex-direction: column;
+    gap: 15px;
+    width: 90%;
+    max-width: 450px;
+  }
+
+  .new-appointment,
+  .in-coming-appointments {
+    width: 100%;
+    max-width: 450px;
+    min-width: 280px;
+    height: auto; 
+    padding: 15px;
+  }
+
+  .in-coming-appointments {
+    overflow: visible; /* remove scroll interno */
+  }
+
+  .appointment-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .appointment-card button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .appointment-card p {
+    width: 100%;
+  }
+
+  .new-appointment button {
+    width: 100%;
+  }
+}
+
+
+/* Media queries - smartphones */
+@media (max-width: 768px) {
+  .new-appointment,
+  .in-coming-appointments {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .appointment-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .appointment-card p {
+    width: 100%;
+  }
+}
+
+/* Media queries - telas muito pequenas (375px) */
+@media (max-width: 375px) {
+  .new-appointment,
+  .in-coming-appointments {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .appointment-card p {
+    font-size: 0.8rem;
+  }
+
+  .appointment-card button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
