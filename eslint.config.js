@@ -17,9 +17,9 @@ export default defineConfig([
       ecmaVersion: 2020,
       globals: {
         ...globals.browser,
-        jest: true,
-        test: true,
-        expect: true,
+        vi: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
       },
       parserOptions: {
         ecmaVersion: 'latest',
