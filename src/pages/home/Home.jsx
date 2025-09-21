@@ -1,6 +1,5 @@
 import { memo } from "react";
 import "./index.css";
-import smiles from "../../assets/smiles.png";
 import star from "../../assets/star-fill.png";
 import arrowRight from "../../assets/arrow-right-up-line (1).png";
 import consultation from "../../assets/consultation.png";
@@ -85,6 +84,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+        
         <div className="consultation">
           <div className="consultation-img">
             <img src={consultation} alt="live-consultation" />
@@ -115,7 +115,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      
+
       <div className="section-committed">
         <div className="committed-left">
           <div className="committed-info">

@@ -1,11 +1,10 @@
-import { memo, useState, useEffect } from "react";
+import { memo, useState, useEffect, useMemo } from "react";
 import "./index.css";
 import {
   collection,
   addDoc,
   query,
   getDocs,
-  orderBy,
   deleteDoc,
   doc,
 } from "firebase/firestore";
@@ -14,11 +13,10 @@ import { db, auth } from "../../services/api";
 const Dashboard = () => {
   const [service, setService] = useState("");
   const [date, setDate] = useState("");
-  const [appointment, setAppointment] = useState(null);
   const [time, setTime] = useState("");
   const [appointments, setAppointments] = useState([]);
 
-  const allTimes = [
+  const allTimes = useMemo(() => [
     "08:00",
     "09:00",
     "10:00",
@@ -28,10 +26,10 @@ const Dashboard = () => {
     "15:00",
     "16:00",
     "17:00",
-  ];
+  ], []) 
+
   const [availableTimes, setAvailableTimes] = useState(allTimes);
 
-  // Busca todos os appointments de todos os usuários
   useEffect(() => {
     const fetchAllAppointments = async () => {
       try {
@@ -50,7 +48,7 @@ const Dashboard = () => {
     fetchAllAppointments();
   }, []);
 
-  // Atualiza horários disponíveis com base na data e em todos os appointments
+
   useEffect(() => {
     if (!date) {
       setAvailableTimes(allTimes);
@@ -68,7 +66,7 @@ const Dashboard = () => {
     if (!freeTimes.includes(time)) {
       setTime("");
     }
-  }, [date, appointments]);
+  }, [date, appointments, allTimes, time]);
 
   const createAppointment = async (e) => {
     e.preventDefault();
@@ -81,8 +79,7 @@ const Dashboard = () => {
       });
 
       console.log("Appointment criado com ID: ", docRef.id);
-      setAppointment({ date, service, time });
-      // Recarrega todos appointments para atualizar horários disponíveis
+
       const q = query(collection(db, "appointments"));
       const querySnapshot = await getDocs(q);
       const allAppointments = querySnapshot.docs.map((doc) => ({
