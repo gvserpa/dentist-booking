@@ -20,6 +20,8 @@ export default defineConfig([
         vi: 'readonly',
         test: 'readonly',
         expect: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
       },
       parserOptions: {
         ecmaVersion: 'latest',
