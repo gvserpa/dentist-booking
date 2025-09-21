@@ -372,17 +372,22 @@ main {
         width: 40%;
     }
 
-    .consultation {
-        width: 100%;
-        height: 64vh;
+    .features-services {
+        height: auto;
     }
 
+
+
     .consultation-img img {
-        height: 90%;
+        height: 100%;
     }
 
     .section-committed {
         flex-direction: column;
+    }
+
+    .committed-right {
+        display: none;
     }
 
     .committed-right img {
