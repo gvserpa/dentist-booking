@@ -350,11 +350,35 @@ main {
 
 
 @media (max-width: 1440px) {
+
+    .main-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .cards {
+        margin-top: 30px;   
+    }
+
+    .card-1, .card-2 {
+        height: auto;
+
+    }
+
+
     .left-right {
         padding: 20px;
     }
     .rating {
         width: 40%;
+    }
+
+    .consultation {
+        width: 100%;
+        height: 64vh;
+    }
+
+    .consultation-img img {
+        height: 90%;
     }
 
     .section-committed {
@@ -400,6 +424,14 @@ main {
     margin-left: 0;
   }
 
+  .rating {
+    width: 20vw;
+  }
+
+  .cards {
+    margin-top: 50px;
+  }
+
   .features-services {
     flex-direction: column;
   }
@@ -407,6 +439,14 @@ main {
   .section-committed {
     margin-top: 900px;
     flex-direction: column;
+  }
+
+  .consultation h2 {
+    margin-left: -25px;
+  }
+
+  .consultation-links {
+    margin-left: -25px;
   }
 
 
@@ -428,6 +468,16 @@ main {
     justify-content: space-between;
     gap: 20px;
   }
+
+
+  .get-content h2 {
+    font-size: 2rem;
+  }
+
+  .get-content img {
+    width: 30vw;
+  }
+
 }
 
 /* Smartphones médios (até 768px) */
@@ -597,6 +647,7 @@ main {
   }
 
 
+
   .links {
     font-size: 0.8rem;
     justify-content: space-between;
@@ -608,7 +659,6 @@ main {
 
   .consultation-links hr {
     width: 100%;
-    margin: 0;
   }
 
   .section-committed {
