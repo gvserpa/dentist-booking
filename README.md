@@ -1,6 +1,7 @@
 # Dentist Booking
 
 [![dentist-booking CI/CD](https://github.com/gvserpa/dentist-booking/actions/workflows/lint-test-deploy.yml/badge.svg)](https://github.com/gvserpa/dentist-booking/actions/workflows/lint-test-deploy.yml)
+[![Vercel](https://img.shields.io/badge/deploy-vercel-blue)]()
 
 ## LIVE DEMO ##
 
