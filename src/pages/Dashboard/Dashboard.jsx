@@ -16,17 +16,20 @@ const Dashboard = () => {
   const [time, setTime] = useState("");
   const [appointments, setAppointments] = useState([]);
 
-  const allTimes = useMemo(() => [
-    "08:00",
-    "09:00",
-    "10:00",
-    "11:00",
-    "13:00",
-    "14:00",
-    "15:00",
-    "16:00",
-    "17:00",
-  ], []) 
+  const allTimes = useMemo(
+    () => [
+      "08:00",
+      "09:00",
+      "10:00",
+      "11:00",
+      "13:00",
+      "14:00",
+      "15:00",
+      "16:00",
+      "17:00",
+    ],
+    []
+  );
 
   const [availableTimes, setAvailableTimes] = useState(allTimes);
 
@@ -47,7 +50,6 @@ const Dashboard = () => {
 
     fetchAllAppointments();
   }, []);
-
 
   useEffect(() => {
     if (!date) {
@@ -120,7 +122,7 @@ const Dashboard = () => {
         <div className="new-appointment">
           <h2>Book an appointment</h2>
           <form onSubmit={createAppointment}>
-            <p>Select a date:</p>
+            <label htmlFor="appointment-date">Select a date:</label>
             <input
               value={date}
               type="date"
@@ -129,7 +131,8 @@ const Dashboard = () => {
               onChange={(e) => setDate(e.target.value)}
               required
             />
-            <p>Service:</p>
+
+            <label htmlFor="services">Service:</label>
             <select
               value={service}
               id="services"
@@ -142,7 +145,8 @@ const Dashboard = () => {
               <option value="cleaning">general cleaning</option>
               <option value="implant">implant</option>
             </select>
-            <p>Available times:</p>
+
+            <label htmlFor="time">Available times:</label>
             <select
               value={time}
               id="time"
