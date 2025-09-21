@@ -1,5 +1,7 @@
 # Dentist Booking
 
+[![dentist-booking CI/CD](https://github.com/gvserpa/dentist-booking/actions/workflows/lint-test-deploy.yml/badge.svg)](https://github.com/gvserpa/dentist-booking/actions/workflows/lint-test-deploy.yml)
+
 ## LIVE DEMO ##
 
  https://dentist-booking-ten.vercel.app/
