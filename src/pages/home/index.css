@@ -56,19 +56,28 @@ main {
 .button-2 {
   padding: 12px 30px;
   border-radius: 10px;
+      cursor: pointer;
 }
 
 .button-1 {
   background-color: rgb(26, 86, 104);
   color: white;
   border: none;
+  transition: transform 0.3s ease;
 }
 
 .button-2 {
   background-color: transparent;
   color: rgb(26, 86, 104);
   border: 1px solid rgb(26, 86, 104);
+  transition: transform 0.3s ease;
 }
+
+.button-1:hover, .button-2:hover, .get-1:hover, .get-2:hover {
+    transform: translateY(-5px);
+}
+
+
 
 .cards {
   display: flex;
@@ -230,12 +239,14 @@ main {
   display: flex;
   justify-content: space-between;
   padding: 10px;
+
 }
 
 .links img {
   padding: 4px;
   background-color: rgb(26, 86, 104);
   border-radius: 50%;
+    cursor: pointer;
 }
 
 .section-committed {
@@ -323,13 +334,18 @@ main {
     background-color: rgb(26, 86, 104);
     color: white;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .get-2 {
     border: 2px solid rgb(26, 86, 104);
     font-weight: 600;
+    cursor: pointer;
 }
 
+.get-1, .get-2 {
+    transition: transform 0.3s ease;
+}
 
 
 

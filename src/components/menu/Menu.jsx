@@ -14,6 +14,16 @@ const Menu = () => {
     setIsOpen(!isOpen);
   };
 
+    const handleScroll = (id) => {
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: id } });
+    } else {
+      const section = document.getElementById(id);
+      if (section) section.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsOpen(false); 
+  };
+
   return (
     <header>
       <div className="header">
@@ -30,9 +40,10 @@ const Menu = () => {
 
         <div className={`menu-nav ${isOpen ? "open" : ""}`}>
           <ul>
-            <li>Treatments</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li onClick={() => handleScroll("home")}><span>Home</span></li>
+            <li onClick={() => handleScroll("services")}>Services</li>
+            <li onClick={() => handleScroll("online-consultation")}>Online Consultation</li>
+            <li onClick={() => handleScroll("get-in-touch")}>Get in Touch</li>
           </ul> 
           <button onClick={handleLogin}>Log In</button>
           <div className="signin-btn">

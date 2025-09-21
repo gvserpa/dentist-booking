@@ -6,8 +6,17 @@ import consultation from "../../assets/consultation.png";
 import committedPhoto from "../../assets/commited-bg.png";
 import checkbox from "../../assets/checkbox-circle-fill.png";
 import dentists from '../../assets/12.png'
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+
+  const navigate = useNavigate()
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    navigate('/login')
+  }
+
   return (
     <main>
       <div className="main-content">
@@ -23,8 +32,8 @@ const Home = () => {
               with a gentle touch, tailored for your comfort.
             </p>
             <div className="main-content-buttons">
-              <button className="button-1">Book Appointment</button>
-              <button className="button-2">Get Started Today</button>
+              <button onClick={handleSubmit} className="button-1">Book Appointment</button>
+              <button  onClick={handleSubmit} className="button-2">Get Started Today</button>
             </div>
           </div>
           <div className="cards">
@@ -59,7 +68,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="features-services">
+      <div id="services" className="features-services">
         <div className="features">
           <h2>
             Features
@@ -85,7 +94,7 @@ const Home = () => {
           </div>
         </div>
         
-        <div className="consultation">
+        <div id="online-consultation" className="consultation">
           <div className="consultation-img">
             <img src={consultation} alt="live-consultation" />
           </div>
@@ -98,17 +107,17 @@ const Home = () => {
             <div className="consultation-links">
               <div className="links">
                 <p>Your Gateway To Smarter, Patient-Friendly Telehealrth</p>
-                <img src={arrowRight} alt="arrow icon" />
+                <img onClick={handleSubmit} src={arrowRight} alt="arrow icon" />
               </div>
               <hr />
               <div className="links">
                 <p>Safe & Protected</p>
-                <img src={arrowRight} alt="arrow icon" />
+                <img onClick={handleSubmit} src={arrowRight} alt="arrow icon" />
               </div>
               <hr />
               <div className="links">
                 <p>24/7 Service</p>
-                <img src={arrowRight} alt="arrow icon" />
+                <img onClick={handleSubmit} src={arrowRight} alt="arrow icon" />
               </div>
               <hr />
             </div>
@@ -158,14 +167,14 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="get-in-touch">
+      <div id="get-in-touch" className="get-in-touch">
         <div className="get-content">
           <h2>Get In Touch With Us </h2>
           <img src={dentists} />
           <p>120k+ Satisfied Patient</p>
           <div className="get-buttons">
-            <buttons className="get-1">Book Appointment</buttons>
-            <buttons className="get-2">Get Started Today</buttons>
+            <buttons onClick={handleSubmit} className="get-1">Book Appointment</buttons>
+            <buttons onClick={handleSubmit} className="get-2">Get Started Today</buttons>
           </div>
         </div>
       </div>
