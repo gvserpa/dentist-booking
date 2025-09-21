@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import Dashboard from "../Dashboard";
 
-jest.mock("../../../services/api", () => ({
+vi.mock("../../../services/api", () => ({
   auth: {
     currentUser: { email: "test@example.com", uid: "123" },
   },
